@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    >
+<fragment
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Map.MapsActivity"
+    tools:ignore="FragmentTagUsage" />
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/baseMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="15dp"
+        app:menu_fab_label="Routes"
+        app:backgroundTint="@android:color/holo_orange_dark"
+        fab:menu_animationDelayPerItem="0"
+        fab:menu_colorNormal="#FF5722"
+        fab:menu_colorPressed="#FF5722"
+        fab:menu_colorRipple="#D99200"
+        fab:menu_labels_hideAnimation="@anim/jump_to_down"
+        fab:menu_labels_showAnimation="@anim/jump_from_down"
+        fab:menu_labels_style="@style/MenuLabelsStyle">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/ringRoad"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_route"
+            app:fab_label="Ring Road" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/m10"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_route"
+            app:fab_label="M10" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/choba"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_route"
+            app:fab_label="Choba" />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/eneka"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_route"
+            app:fab_label="Eneka" />
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/oyigbo"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_route"
+            app:fab_label="Oyigbo" />
+    </com.github.clans.fab.FloatingActionMenu>
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/polyMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="15dp"
+        app:menu_fab_label="Boundary"
+        fab:menu_animationDelayPerItem="0"
+        fab:menu_colorNormal="#FF5722"
+        fab:menu_colorPressed="#FF5722"
+        fab:menu_colorRipple="#D99200"
+        fab:menu_labels_hideAnimation="@anim/jump_to_down"
+        fab:menu_labels_showAnimation="@anim/jump_from_down"
+        fab:menu_labels_style="@style/MenuLabelsStyle">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/isiopko"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_route"
+            app:fab_label="Isiokpo" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/commerce"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_route"
+            app:fab_label="Commerce" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/airport"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_route"
+            app:fab_label="Airport " />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/recreation"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_route"
+            app:fab_label="Parks " />
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/gpc"
+            style="@style/MenuButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_route"
+            app:fab_label=" GPH layout" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="?android:attr/colorPressedHighlight"
+            android:padding="5dp"
+            android:text="@string/distance"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/input_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignStart="@id/tv_distance"
+            android:layout_marginTop="5dp"
+            android:hint="@string/search"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic__search" />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="7dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            app:backgroundTint="@android:color/holo_orange_dark"
+            app:srcCompat="@android:drawable/ic_menu_delete"
+            android:contentDescription="@string/delete" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            app:backgroundTint="@android:color/holo_orange_dark"
+            app:srcCompat="@android:drawable/ic_menu_mylocation"
+            android:contentDescription="@string/location" />
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
